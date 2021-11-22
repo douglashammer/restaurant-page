@@ -8,16 +8,14 @@ import locationImg from './dougz-location.jpg';
 
 export default function loadHome() {
   const content = document.getElementById('content');
-  
-  // nav-bar
-  content.appendChild(navBar());
+  const homeWrapper = document.createElement('div');
+  homeWrapper.classList.add('home-wrapper');
 
 	// section 1
 	const section1 = document.createElement('section');
 	const topImg = createImg(mainImage, 'Dougz Coffee Shop');
 	section1.classList.add('section1');
 	section1.innerHTML = `<img src=${topImg.src} title=${topImg.title}></img>`;
-	content.appendChild(section1);
 
 	// section 2
 	const section2 = document.createElement('section');
@@ -29,10 +27,6 @@ export default function loadHome() {
 	const aboutCopy = document.createElement('p');
 	aboutCopy.innerHTML +=
 		"Here at Dougz Coffee, we value the good things in life, whether that be a cup of our signature 'Morning Mantra Roast' or the warm embrace of a close friend. Our number one goal has always been simple: Lorem Ipsum. So be like us!<br /><i>Do Good. Drink Good.</i>";
-
-	content.appendChild(section2);
-	section2.appendChild(aboutHead);
-	section2.appendChild(aboutCopy);
 
 	// section 3
 	const section3 = document.createElement('section');
@@ -67,41 +61,21 @@ export default function loadHome() {
   `;
 
 	section3.innerHTML = productHTML;
-	content.appendChild(section3);
 
 	// section 4
 	const section4 = document.createElement('section');
 	section4.classList.add('section4');
 	const location = createImg(locationImg, 'Dougz Location');
 	section4.innerHTML = `<img src=${location.src} title=${location.title}></img>`;
-	content.appendChild(section4);
+  
+  // append children to DOM
+  homeWrapper.appendChild(section1);
+  section2.appendChild(aboutHead);
+	section2.appendChild(aboutCopy);
+  homeWrapper.appendChild(section2);
+  homeWrapper.appendChild(section3);
+	homeWrapper.appendChild(section4);
+  content.appendChild(homeWrapper);
 
-	// section 5
-  const footer = document.createElement('footer');
- 
-	const footerHTML = `
-    <div class="footer-container">
-      <div class="footer-row">
-        <div class="footer-column">
-          <h3>Main Menu</h3>
-            <ul>
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#about">About</a></li>
-              <li class="copyright">Copyright © 2021 Dougz Coffee.</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Social</h3>
-            <ul>
-              <li><a href="#instagram">Instagram</a></li>
-              <li><a href="#twitter">Twitter</a></li>
-            </ul
-        </div>
-      </div>
-    </div>
-  `;
-	footer.innerHTML = footerHTML; 
-	content.appendChild(footer);
 	return content;
 }

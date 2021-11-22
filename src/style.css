@@ -17,6 +17,7 @@ body {
 	background-color: #fdfdf5;
 	position: fixed;
   width: 100%;
+  border: 1px solid #e0e0dc;
 }
 
 #nav-bar img {
@@ -36,8 +37,9 @@ body {
 	padding: 14px 16px;
 	font-size: 17px;
 	color: #1f6072;
-	font-size: 30px;
-	margin-top: 80px;
+	font-size: 28px;
+  margin-top: 80px;
+  letter-spacing: 5px;
 }
 
 #nav-bar ul li:hover {
@@ -58,7 +60,7 @@ body {
 
 .section2 {
 	background-color: #fdfdf5;
-  padding: 100px 0 100px 0;
+  padding: 60px 0 60px 0;
   margin: auto;
   width: 75%;
 	color: #174c5a;
@@ -67,15 +69,18 @@ body {
 .section2 h3 {
 	font-size: 50px;
   margin-bottom: 20px;
+  letter-spacing: 8px;
 }
 
 .section2 p {
   font-size: 25px;
+  letter-spacing: 2px;
 }
 
 .section2 p i {
 	font-weight: 400;
   font-size: 30px;
+  letter-spacing: 2px;
 }
 
 .section3 {
@@ -98,14 +103,16 @@ body {
 	display: block;
 	margin-bottom: 15px;
 	font-weight: 400;
-	font-size: 50px;
+  font-size: 50px;
+  letter-spacing: 4px;
 }
 
 .product-copy {
 	font-size: 20px;
 	color: #fdfdf5;
 	text-align: left;
-	align-items: center;
+  align-items: center;
+  letter-spacing: 2px;
 }
 
 .section4 img {
@@ -158,4 +165,47 @@ footer a {
   font-size: 15px;
   color: #818181;
   margin-top: 60px;
+}
+
+.menu-wrapper {
+  margin: 0 auto;
+	display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr ));
+  max-width: 800px;
+	gap: 50px;
+  justify-content: center;
+  padding: 100px;
+  color: #154452;
+}
+
+.menu-wrapper h2 {
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 8px;
+  padding-top: 100px;
+}
+
+.menu-copy {
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.menu-copy h4 {
+  padding-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.menu-item h4 span {
+  float: right;
+}
+
+.menu-item img {
+  padding-top: 85px;
+  width: 140px;
+}
+
+.hidden {
+  display: none;
 }
