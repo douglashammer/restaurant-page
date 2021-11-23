@@ -10,7 +10,6 @@ export default function footer() {
               <li><a href="#home">Home</a></li>
               <li><a href="#menu">Menu</a></li>
               <li><a href="#contact">Contact</a></li>
-              <li class="copyright">Copyright © 2021 Dougz Coffee.</li>
             </ul>
         </div>
         <div class="footer-column">
@@ -18,6 +17,7 @@ export default function footer() {
             <ul>
               <li><a href="#instagram">Instagram</a></li>
               <li><a href="#twitter">Twitter</a></li>
+              <li class="copyright">Copyright © 2021 Dougz Coffee.</li>
             </ul
         </div>
       </div>
